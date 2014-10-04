@@ -31,6 +31,18 @@
  * Track form submit
  * ================
  * <form action="/payment" data-mixp-track-form="event name" data-mixp-attrs='{}'>...</form> 
+ *
+ * Call track event on a element through JavaScript
+ * ================================================
+ * 
+ * A custom function to send events by calling from javascript.
+ * It will take all properties from the given element and send with event. 
+ * Although we can use mixpanel.track() as well but `send()` will collect 
+ * all attributes (`data-mixp-attrs`) from element
+ * 
+ * 
+ * @usage
+ * MixpanelPlugin.send(elem)
  * 
  */
 
@@ -175,8 +187,11 @@
       },
 
       /**
-       * A custom function to send evenets by calling it
-       * as MixpanelPlugin.send(elem)
+       * A custom function to send events by calling from javascript.
+       * It will take all properties from the given element and send with event
+       * 
+       * @usage
+       * MixpanelPlugin.send(elem)
        * 
        * @return {[type]} [description]
        */
