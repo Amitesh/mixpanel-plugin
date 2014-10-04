@@ -1,4 +1,4 @@
-# mixpanel-plugin
+# mixpanel-plugin.js
 
 Makes mixpanel javascript api integration simple
 
