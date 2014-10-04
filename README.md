@@ -58,6 +58,14 @@ It will add action path as url property with submit event.
 <form action="/payment" data-mixp-track-form="event name" data-mixp-attrs='{}'>
 </form> 
 ```
+## Call track event on a element through JavaScript
+
+A custom function to send events by calling from javascript. It will take all properties from the given element and end with event. Although we can use mixpanel.track() as well but `send()` will collect all attributes (`data-mixp-attrs`) from element
+
+```javascript
+MixpanelPlugin.send(elem)
+````
+
 
 ## References
 
