@@ -1,19 +1,16 @@
-mixpanel-plugin
-===============
+# mixpanel-plugin
 
 Makes mixpanel javascript api integration simple
 
 A plugin to add Mixpanel tracking api calls with respective elements 
 and also call the associated event.
  
-Usage
-=====
+## Usage
  
 Add respective data attributes with elemets and it will call the 
 approperiate Mixpanel api for it.
 
-Track page event
-================
+## Track page event
 
 ```html
 <div data-mixp-event="event name" 
@@ -22,8 +19,7 @@ Track page event
 ```
 Event name example : Page.home, Page.login
 
-Track user identity and add his/her profile
-===========================================
+## Track user identity and add his/her profile
 
 ```html
 <div data-mixp-person-identity="user unique id" 
@@ -34,8 +30,7 @@ Track user identity and add his/her profile
 
 Check Mixpanel `mixpanel.person.set` documentation for more information about properties associated woith person.
 
-Track link click
-================
+## Track link click
 
 It will add href as url property with the click event.
 
@@ -51,8 +46,7 @@ Example
 </a>
 ```
 
-Track form submit
-================
+## Track form submit
 
 It will add action path as url property with submit event.
 
@@ -61,8 +55,7 @@ It will add action path as url property with submit event.
 </form> 
 ```
 
-Todo
-====
+## Todo
 
 - Add test for all scenarios
 - Integrate more api from Mixpanel
@@ -72,7 +65,6 @@ I love to get your feedback and improvements for this plugin. Ask me if you want
 Thank you to read about it.
 
 
-LICENSE
-=======
+## License
 
 Absolutely Free :)
