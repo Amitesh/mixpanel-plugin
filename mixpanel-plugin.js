@@ -1,15 +1,11 @@
-// data-mixpp-person-identity="" data-mixp-event="page.home" data-mixp-attrs='{"prop1": "val1", "prop2": "val1"}'
-// data-mixp-send="Click.buy_button" data-mixp-attrs='{}'
-// data-mixp-track-link="Click.login" data-mixp-attrs='{}'
-// 
-// // === EZ ===
-// // !=== EZ ===
-
 /**
  * A plugin to add Mixpanel tracking api calls with respective elements 
  * and also call the associated event
  *
- * @usage
+ * @author : Amitesh Kumar
+ * @documentation : Checkout at https://github.com/Amitesh/mixpanel-plugin
+ * 
+ * @usage :
  *
  * Add respective data attributes with elemets and it will call the 
  * approperiate Mixpanel api for it.
@@ -17,11 +13,14 @@
  * Track page event
  * =================
  * <div data-mixp-event="event name" data-mixp-attrs='{"prop1": "val1", "prop2": "val1"}' ></div>
+ * event name example : Page.home, Page.login
  *
  * Track user identity and add his/her profile
  * ===========================================
  * <div data-mixp-person-identity="user unique id" data-mixp-attrs='{"$first_name": "val1", "$last_name": "val1", "$email": "", "other":""}' ></div>
- *
+ * 
+ * Check Mixpanel `mixpanel.person.set` documentation for more information about properties associated woith person.
+ * 
  * Track link click
  * ================
  * It will also add the href as a property.
@@ -32,7 +31,6 @@
  * Track form submit
  * ================
  * <form action="/payment" data-mixp-track-form="event name" data-mixp-attrs='{}'>...</form> 
- * <a href="#" data-mixp-track-form="Action.payment" data-mixp-attrs='{}'></a> 
  * 
  */
 
@@ -150,7 +148,6 @@
         });
       },
       
-      //data-mixp-track-form
       trackFormSubmit: function(){
         var forms = $('[data-' + prefix + '-track-form]');
 
