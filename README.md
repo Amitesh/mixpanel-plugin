@@ -1,10 +1,14 @@
 # mixpanel-plugin.js
 
-Makes mixpanel javascript api integration simple
+Makes Mixpanel javascript api integration simple
 
 A plugin to add Mixpanel tracking api calls with respective elements 
 and also call the associated event.
- 
+
+## Requirement
+
+Add [jQuery.js](http://jquery.com/) plugin
+
 ## Usage
  
 Add respective data attributes with elemets and it will call the 
@@ -54,6 +58,12 @@ It will add action path as url property with submit event.
 <form action="/payment" data-mixp-track-form="event name" data-mixp-attrs='{}'>
 </form> 
 ```
+
+## References
+
+[Mixpanel.com](https://mixpanel.com)
+
+[Mixpanel Documentation](https://mixpanel.com/help/reference)
 
 ## Todo
 
