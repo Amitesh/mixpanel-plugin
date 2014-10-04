@@ -4,42 +4,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Mixpanel-plugin by Amitesh</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/Amitesh/mixpanel-plugin">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/Amitesh/mixpanel-plugin/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/Amitesh/mixpanel-plugin/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
     <div class="wrapper">
-
+      <header>
+        <h1>Mixpanel-plugin</h1>
+        <p>Makes mixpanel javascript api integration simple</p>
+        <p class="view"><a href="https://github.com/Amitesh/mixpanel-plugin">View the Project on GitHub <small>Amitesh/mixpanel-plugin</small></a></p>
+        <ul>
+          <li><a href="https://github.com/Amitesh/mixpanel-plugin/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Amitesh/mixpanel-plugin/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Amitesh/mixpanel-plugin">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
       <section>
-        <div id="title">
-          <h1>Mixpanel-plugin</h1>
-          <p>Makes mixpanel javascript api integration simple</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/Amitesh">Amitesh</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
         <h1>
 <a name="mixpanel-pluginjs" class="anchor" href="#mixpanel-pluginjs"><span class="octicon octicon-link"></span></a>mixpanel-plugin.js</h1>
+
+<p>Makes Mixpanel javascript api integration simple</p>
+
+<h1>
+<a name="mixpanel-pluginjs-1" class="anchor" href="#mixpanel-pluginjs-1"><span class="octicon octicon-link"></span></a>mixpanel-plugin.js</h1>
 
 <p>Makes Mixpanel javascript api integration simple</p>
 
@@ -54,8 +48,26 @@ and also call the associated event.</p>
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Add respective data attributes with elemets and it will call the 
+<p>Load the <code>mixpanel-plugin.js</code> file with page after <strong>jQuery</strong> plugin js.</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"mixpanel-plugin/mixpanel-plugin.js"</span> <span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Add respective data attributes with elements and it will call the 
 approperiate Mixpanel api for it.</p>
+
+<h3>
+<a name="list-of-data-attributes" class="anchor" href="#list-of-data-attributes"><span class="octicon octicon-link"></span></a>List of data attributes</h3>
+
+<p><code>data-mixp-event</code>
+<code>data-mixp-attrs</code>
+<code>data-mixp-track-link</code>
+<code>data-mixp-track-form</code></p>
+
+<h3>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<p><code>MixpanelPlugin.send(elem)</code></p>
 
 <h2>
 <a name="track-page-event" class="anchor" href="#track-page-event"><span class="octicon octicon-link"></span></a>Track page event</h2>
@@ -104,11 +116,28 @@ approperiate Mixpanel api for it.</p>
 </pre></div>
 
 <h2>
+<a name="call-track-event-on-a-element-through-javascript" class="anchor" href="#call-track-event-on-a-element-through-javascript"><span class="octicon octicon-link"></span></a>Call track event on a element through JavaScript</h2>
+
+<p>A custom function to send events by calling from javascript. It will take all properties from the given element and end with event. Although we can use mixpanel.track() as well but <code>send()</code> will collect all attributes (<code>data-mixp-attrs</code>) from element</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">MixpanelPlugin</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">elem</span><span class="p">)</span>
+</pre></div>
+
+<h2>
 <a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>References</h2>
 
-<p><a href="https://mixpanel.com">Mixpanel.com</a></p>
+<ul>
+<li><a href="https://mixpanel.com">Mixpanel.com</a></li>
+<li><a href="https://mixpanel.com/help/reference">Mixpanel Documentation</a></li>
+<li><a href="http://blog.qhashtech.com/2014/10/04/plugin-for-mixpanel-javascript-api-integration">Blog</a></li>
+</ul><h2>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
 
-<p><a href="https://mixpanel.com/help/reference">Mixpanel Documentation</a></p>
+<p>Activity feeds
+<img src="http://blog.qhashtech.com/content/uploads/2014/10/mixpanel-activity-feeds.png" alt="Activity feeds" title="Activity feeds"></p>
+
+<p>Successful payment funnel
+<img src="http://blog.qhashtech.com/content/uploads/2014/10/Checkout-succesfull-funnel.png" alt="Successful payment funnel" title="Funnel"></p>
 
 <h2>
 <a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>Todo</h2>
@@ -125,8 +154,11 @@ approperiate Mixpanel api for it.</p>
 
 <p>Absolutely Free :)</p>
       </section>
-
     </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/Amitesh">Amitesh</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
