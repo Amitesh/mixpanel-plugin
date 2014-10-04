@@ -9,6 +9,12 @@ and also call the associated event.
 
 Add [jQuery.js](http://jquery.com/) plugin
 
+## You can get the plugin from gtihub
+
+- [Github url](https://github.com/Amitesh/mixpanel-plugin)
+- [Github page](http://amitesh.github.io/mixpanel-plugin/)
+- [Blog](http://blog.qhashtech.com/2014/10/04/plugin-for-mixpanel-javascript-api-integration/)
+
 ## Usage
 
 Load the `mixpanel-plugin.js` file with page after **jQuery** plugin js.
