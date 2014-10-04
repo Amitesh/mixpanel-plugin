@@ -10,9 +10,27 @@ and also call the associated event.
 Add [jQuery.js](http://jquery.com/) plugin
 
 ## Usage
- 
-Add respective data attributes with elemets and it will call the 
+
+Load the `mixpanel-plugin.js` file with page after **jQuery** plugin js.
+
+```html
+<script type="text/javascript" src="mixpanel-plugin/mixpanel-plugin.js" ></script>
+```
+
+Add respective data attributes with elements and it will call the 
 approperiate Mixpanel api for it.
+
+### List of data attributes
+
+`data-mixp-event`
+`data-mixp-attrs`
+`data-mixp-track-link`
+`data-mixp-track-form`
+
+### Methods
+
+`MixpanelPlugin.send(elem)`
+
 
 ## Track page event
 
@@ -69,9 +87,17 @@ MixpanelPlugin.send(elem)
 
 ## References
 
-[Mixpanel.com](https://mixpanel.com)
+- [Mixpanel.com](https://mixpanel.com)
+- [Mixpanel Documentation](https://mixpanel.com/help/reference)
+- [Blog](http://blog.qhashtech.com/2014/10/04/plugin-for-mixpanel-javascript-api-integration)
 
-[Mixpanel Documentation](https://mixpanel.com/help/reference)
+## Screenshots
+
+Activity feeds
+![Activity feeds](http://blog.qhashtech.com/content/uploads/2014/10/mixpanel-activity-feeds.png "Activity feeds")
+
+Successful payment funnel
+![Successful payment funnel](http://blog.qhashtech.com/content/uploads/2014/10/Checkout-succesfull-funnel.png "Funnel")
 
 ## Todo
 
